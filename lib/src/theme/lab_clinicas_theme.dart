@@ -25,12 +25,30 @@ final class LabClinicasTheme {
         ),
         floatingLabelStyle:
             const TextStyle(color: blueColor, fontWeight: FontWeight.w600),
-        border:  _defaultInputBorder,
+        border: _defaultInputBorder,
         enabledBorder: _defaultInputBorder,
         focusedBorder: _defaultInputBorder,
         errorBorder: _defaultInputBorder.copyWith(
             borderSide: const BorderSide(color: Colors.red)),
       ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          backgroundColor: Colors.white,
+          side: const BorderSide(
+            color: blueColor,
+          ),
+          foregroundColor: blueColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16)
+          ),
+          textStyle: const TextStyle(
+            fontFamily: 'Montserrat',
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          )
+        )
+      ),
+
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
         backgroundColor: blueColor,
@@ -40,7 +58,8 @@ final class LabClinicasTheme {
             fontFamily: 'Montserrat',
             fontSize: 14,
             fontWeight: FontWeight.w700),
-      )));
+      ))
+      );
 
   static final darktheme = ThemeData();
 
